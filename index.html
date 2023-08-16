@@ -237,10 +237,11 @@
 
         <section id="contact">
             <h2>CONTACT</h2>
-            <form id="contactForm">
+
+            <form id="contactForm" action="https://formspree.io/f/xvojkyjj" method="POST">
 
                 <label for="fullName">Full Name (required):</label>
-                    <input type="text" id="fullName" required>
+                    <input type="text" id="fullName" name="fullName" required>
 
                     <span id="fullNameError" class="error"></span>
                     <br>
@@ -256,19 +257,19 @@
                     <br>
             
                 <label for="emailAddress">Email Address:</label>
-                    <input type="email" id="emailAddress">
+                    <input type="email" id="emailAddress" name="emailAddress">
 
                     <span id="emailAddressError" class="error"></span>
                     <br>
             
                 <label for="telephone">Telephone:</label>
-                    <input type="tel" id="telephone">
+                    <input type="tel" id="telephone" name="telephone">
 
                     <span id="telephoneError" class="error"></span>
                     <br>
             
                 <label for="comments">Comments (required):</label>
-                    <textarea id="comments" required></textarea>
+                    <textarea id="comments" name="comments" required></textarea>
 
                     <span id="commentsError" class="error"></span>
                     <br>
@@ -276,6 +277,8 @@
                 <button type="submit">Submit</button>
 
               </form>
+
+          
 
         </section>
     </main>

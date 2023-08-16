@@ -116,6 +116,9 @@ const message = document.getElementById("message");
           const formattedAlertMessage = `Full Name: "${formData.fullName}"\nPreferred Contact Method: "${formData.preferredContact}"\nEmail Address: "${formData.emailAddress}"\nTelephone: "${formData.telephone}"\nComments: "${formData.comments}"`;
 
           alert(formattedAlertMessage);
+
+          document.getElementById('contactForm').submit();
+
         }
 
     });
