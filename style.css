@@ -24,6 +24,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+  
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -78,7 +79,7 @@ body {
 .brand {
     position: absolute;
     left: 50px;
-    top: 10px;
+    top: 15px;
     font-size: 40px;
    font-family: 'Source Code Pro', monospace;
    color: rgb(255, 255, 255);
@@ -98,71 +99,137 @@ header {
 }
 
 .nav-container {
-    display: flex;
-    align-items: center;
-    max-width: 100%; 
-    margin: 0 auto; 
-    padding: 1rem; 
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0));
-    justify-content: center;
-    font-family: 'Ubuntu Condensed', sans-serif;
+  display: flex;
+  max-width: 100%;
+  padding: 10px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0));
+  font-family: 'Ubuntu Condensed', sans-serif;
+  justify-content: right;
+  
+}
+
+nav {
+  display: flex;
+  
+
 }
 
 nav ul {
-    list-style-type: none;
-    margin-left: 40%;
-    padding: 0;
-    padding-top: 5px;
-    display: flex;
-    
+  display: flex;
+  gap: 50px;
+  padding-right: 140px;
+  margin-top: 40px;
+
 }
+
 
 nav li {
-    margin-left: 50px; 
-    
+  /* margin: 10px 20px;  Adjust horizontal margin. --------------------------------  THIS WAS WHITE SPACE CULPRIT!  */
+
 }
 
+
 nav a {
-    text-decoration: none;
-    color: #ff9c08; 
-    transition: color 0.3s; 
-    font-size: 30px;
-    font-weight: bold;
+  text-decoration: none;
+  color: #ff9c08;
+  transition: color 0.3s;
+  font-size: 2rem; /* Adjust font size for smaller screens */
+  font-weight: bold;
+
 }
 
 nav a:hover {
-    color: rgb(28, 69, 100);
+  color: rgb(28, 69, 100);
 }
+
+@media only screen and (max-width: 1150px) {
+  nav a {
+    text-decoration: none;
+    color: #ff9c08;
+    transition: color 0.3s;
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+    font-weight: bold;
+  }
+
+  
+  nav ul {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 20px;
+    padding-right: 7rem;
+  
+  }
+
+}
+
+@media (max-width: 950px) {
+
+  nav ul {
+    display: flex;
+    gap: 2rem;
+    padding-right: 0;
+
+  
+  }
+  
+  .nav-container {
+    justify-content: center;
+    
+  }
+
+  nav ul {
+    margin-top: 80px;
+    
+  }
+  
+}
+
+
 
 /* Dark Mode Button */
 
 #darkmodeLabel {
-    width: 60px;
+    width: 5%;
     height: 30px;
     position: absolute;
     display: block;
     background-color: #ffffff;
     border-radius: 200px;
-    box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+    box-shadow: inset 0px 7px 15px rgba(0, 0, 0, 0.408), inset 0px -5px 15px rgba(0, 0, 0, 0.4);
     cursor: pointer;
     transition: .5s;
-    z-index: 2;
-    left: 1420px;
+    z-index: 1002;
+    top: 30%;
+    right: 30px;
 }
 
 #darkmodeLabel::after {
     content: "";
-    width: 30px;
+    width: 46%;
     height: 30px;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     background: linear-gradient(180deg,#ffcc89, #d8860b);
     border-radius: 180px;
     box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
     transition: .5s;
-    
 
+}
+
+@media (max-width: 950px) {
+  #darkmodeLabel {
+     display: inline-block;
+      width: 70px; /* Adjust the width for smaller screens */
+      right: 20px;
+      top: 23px;
+      /* Additional styles for small screens */
+  }
+
+  #darkmodeLabel::after {
+      width: 45%; /* Adjust the width of the pseudo-element for smaller screens */
+      /* Additional styles for small screens */
+  }
 }
 
 #darkmode { /* checkbox */
@@ -178,16 +245,17 @@ nav a:hover {
 }
 
 #darkmode:checked + label::after {
-    left: 60px;
+    left: 100%;
     transform: translateX(-100%);
     background: linear-gradient(180deg,#777,#3a3a3a);
 
 }
 
 #darkmodeLabel:hover:after {
-    width: 40px;
+    width: 60%;
 
 }
+
 
 
                                                                                                     /* Landing Section */
@@ -203,6 +271,8 @@ nav a:hover {
     align-items: center;
     position: relative;
     font-family: 'Ubuntu Condensed', sans-serif;
+    
+    min-height: 600px;
 }
 
 .welcometext {
@@ -233,13 +303,14 @@ nav a:hover {
 }
 
 .U::after { /* Dividing Line */
-    content: "";
-    width: 150px;
-    height: 1px;
-    background-color: rgb(255, 255, 255);
-    position: absolute;
-    top: 387px;
-    left: 682px;
+  content: "";
+  width: 10%; /* Use percentage for width */
+  height: 1px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 51%; /* Use percentage for vertical positioning */
+  left: 49.5%; /* Use percentage for horizontal positioning */
+  transform: translate(-50%, -50%); /* Center the line */
 
 }
 
@@ -272,15 +343,15 @@ nav a:hover {
 #about {
     background-color: var(--colortoggle-1);
     padding: 3rem 0;
-    background-position: center;
-    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 600px;
-    min-height: calc(100vh - 60px); /* minus the header height */
+    height: 100vh;
+    min-height: 700px;
     font-family: 'Ubuntu Condensed', sans-serif;
+    
+    
 }
 
 .vertical-text {
@@ -297,41 +368,83 @@ nav a:hover {
 }
 
 .about-content {
-    max-width: 1000px;
     padding: 2rem;
     color: whitesmoke;
-   
-    margin: 0 auto; 
-    font-size: 18px;
+    margin: 0 10% 0 14%; 
+    font-size: 22px;
     line-height: 1.5;
-    max-width: 600px;
     text-align: center;
 }
 
 .about-content2 {
-    max-width: 1000px;
     padding: 2rem;
     color: whitesmoke;
-   
-    margin: 0 auto; 
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.5;
-    max-width: 600px;
     text-align: center;
 }
 
 .about-content3 {
-    max-width: 1000px;
     padding: 2rem;
     color: whitesmoke;
-   
-    margin: 0 auto; 
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.5;
-    max-width: 600px;
     text-align: center;
 }
 
+@media (max-width: 950px) {
+
+.about-content {
+    margin: 0 7% 0 20%; 
+    font-size: 18px;
+
+}
+
+.about-content2 {
+    font-size: 18px;
+}
+
+.about-content3 {
+    font-size: 18px;
+  
+}
+
+
+}
+
+@media (max-width: 600px) {
+
+  #about {
+    min-height: 600px;
+}
+
+.about-content {
+    margin: 15% 0% 0 20%; 
+    font-size: 12px;
+  
+}
+
+.about-content2 {
+    margin: 0 -10% 0 -10%;
+    font-size: 12px;
+  
+}
+
+.about-content3 {
+    margin: 0 -10% 0 -10%;
+    font-size: 12px;
+   
+}
+
+.vertical-text {
+  font-size: 6.5rem;
+  left: 1rem;
+  color: var(--colortoggle-4);
+  
+}
+
+
+}
 
 
                                                                                                     /* EXPERIENCE */
@@ -344,6 +457,7 @@ nav a:hover {
     font-family: 'Ubuntu Condensed', sans-serif;
     position: relative;
     height: 100vh;
+    min-height: 650px;
     
   }
 
@@ -351,7 +465,8 @@ nav a:hover {
     font-size: 7.5rem;
     font-weight: bold;
     line-height: 1.2;
-    max-width: 40%;
+    justify-content: left;
+    display: flex;
     color: var(--colortoggle-4);
     
 }
@@ -379,7 +494,7 @@ nav a:hover {
     bottom: 0;
     left: 50%;
     margin-left: -1px;
-    min-height: 1200px;
+    min-height: 800px;
   }
   
   .timeline-exp {
@@ -496,6 +611,90 @@ nav a:hover {
   }
 
 
+  @media (max-width: 1096px) {
+   
+    .timeline-content.right {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+      width: 35%;
+      left: 1.2%;
+      float: right;
+    }
+  
+    .timeline-content.left {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+      width: 35%;
+      right: 59%;
+      float: right;
+    }
+    
+    /* sub-line for right items */
+    .timeline-content.right::before {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 2px;
+      background-color: var(--colortoggle-4);
+      top: calc(50% - 1px);
+      right: 121%;
+    }
+
+    
+    /* sub-line for left items */
+    .timeline-content.left::before {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 2px;
+      background-color: var(--colortoggle-4);
+      top: calc(50% - 1px);
+      left: 115%;
+    }
+
+    .timeline-exp::after {  /* Main Arrows */
+      content: '';
+      position: absolute;
+      top:490px;
+      border-style: solid;
+      border-width: 10px 10px 0 10px;
+      border-color: var(--colortoggle-4) transparent transparent transparent;
+      bottom: -10px; 
+      left: 50%;
+      margin-left: -10px; 
+    }
+    
+  }
+
+
+
+  @media (max-width: 700px) {
+
+    #experience h2 {
+      font-size: 5.5rem;
+      justify-content: center;
+      
+  }
+
+    /* sub-line for right items */
+    .timeline-content.right::before {
+      display: none;
+
+    }
+
+    
+    /* sub-line for left items */
+    .timeline-content.left::before {
+      display: none;
+    }
+  }
+
                                                                                                     /* WORKS */
 
 
@@ -505,7 +704,7 @@ nav a:hover {
     padding: 2rem 2rem;
     font-family: 'Ubuntu Condensed', sans-serif;
     position: relative;
-    height: 105vh;
+    min-height: 550px;
     
     
 }
@@ -539,7 +738,7 @@ nav a:hover {
 
   .carousel-item.active {
     display: block;
-    
+    position: relative;
     
   }
 
@@ -547,22 +746,10 @@ nav a:hover {
     display: none;
     text-align: center;
     
-    
   }
 
-  .product-images { /* img div */
-    display: grid;
-    grid-template-columns: 200px 200px 200px 200px 200px 200px;
-    justify-content: center;
-    gap: 3rem; 
-    height: 300px;
-    padding-right: 40px;
-    
-    
-  }
-
-
-  .carousel-item h3 {
+  
+  .carousel-item h3 { /* top below "works" descrip */
     font-size: 25px;
     padding-bottom: 20px;
     color: var(--colortoggle-5);
@@ -570,19 +757,19 @@ nav a:hover {
   }
 
   .carousel-item p { /* descrip */
-    position: relative;
-    top: 200px;
     color: var(--colortoggle-5);
-    
-  }
-  
-  .carousel-navigation {
     display: flex;
     justify-content: center;
-    margin-top: 14rem;
   }
   
-  .carousel-nav-btn {
+  .carousel-navigation { /* button group */
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+
+  }
+  
+  .carousel-nav-btn { /* indiv. button */
     background-color: var(--colortoggle-6);
     color: var(--colortoggle-2);
     border: none;
@@ -591,51 +778,104 @@ nav a:hover {
     margin: 0 0.25rem;
   }
   
-  .carousel-nav-btn:hover {
-    background-color: #555;
-    color: whitesmoke;
-  }
+                            .carousel-nav-btn:hover {
+                              background-color: #555;
+                              color: whitesmoke;
+                            }
 
-  .product-images.eventide { /* eventide */
-    margin-left: 930px;
-    position: relative;
-    gap: 8rem;
-    top:40px;
+  
 
-  }
-
-  .product-images.eventide img { /* eventide */
-    max-width: 150%;
+  .product-images { /* trifold */
+    display: grid;
+    grid-template-columns: repeat(6, 13%);
+    gap: 3rem; 
+    justify-content: center;
+    margin-right: 40px;
     
-
   }
 
   .cardfront { /* card */
-    left: 250px;
-    position: relative;
-    bottom: 15px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 60%;
+    margin-left: 200px;
+    margin-bottom: 50px;
 
   }
 
   .cardback { /* card */
-    left: 750px;
-    position: relative;
-    bottom: 15px;
+    grid-column-start: 5;
+    grid-column-end: 7;
+    width: 60%;
+    margin-left: -76px;
+    margin-bottom: 50px;
 
-  }
-
-  .product-images.nexus { /* nexus */
-    margin-left: 850px;
-    position: relative;
-
-  }
-
-  .product-images.nexus img { /* nexus */
-    max-width: 320%;
 
   }
 
   
+  .eventide { /* eventide */
+    width: 20%;
+    display: flex;
+    gap: 3rem;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 33px;
+  }
+
+  .nexus { /* nexus */
+    display: flex;
+    width: 500px;
+    justify-content: center;
+    margin: 0 auto;
+    padding-bottom: 50px;
+
+  }
+
+
+  @media (max-width: 1015px) {
+  
+  
+    .product-images { /* trifold */
+      display: flex;
+      flex-wrap: wrap;
+      gap: 80px;
+      justify-content: center;
+    }
+
+    .item {  /* trifold */
+      width: 210px;
+    }
+
+    .cardfront { /* card */
+    padding-top: 30px;
+    padding-bottom: 50px;
+    margin-left: 0;
+    margin-bottom: 0;
+    }
+  
+    .cardback { /* card */
+    padding-top: 30px;
+    padding-bottom: 50px;
+    margin-left: 0;
+    margin-bottom: 0;
+    }
+  
+  
+
+  }
+
+  @media (max-width: 685px) {
+
+    .nexus { /* nexus */
+      width: 350px;
+      
+  
+    }
+
+
+  }
 
 
                                                                                                     /* GAME */
@@ -647,6 +887,8 @@ nav a:hover {
     font-family: 'Ubuntu Condensed', sans-serif;
     position: relative;
     height: 100vh;
+    min-height: 735px;
+    
 }
 
 #game h2 {
@@ -730,9 +972,9 @@ button:hover {
 
 #gameicon2 { /* 5 dice */
     max-width: 50px;
-    margin-left: 851px;
+    margin-right: 300px;
     margin-top: -250px;
-    position: absolute;
+    float: right;
     rotate: 50deg;
     fill: var(--colortoggle-5);
 }
@@ -740,35 +982,36 @@ button:hover {
 
 #gameicon3 { /* 1 dice */
     max-width: 50px;
-    margin-left: 880px;
+    margin-right: 269px;
     margin-top: -287px;
-    position: absolute;
+    float: right;
     rotate: 20deg;
     fill: var(--colortoggle-5);
 }
 
 #gameicon4 { /* 6 dice */
     max-width: 40px;
-    margin-left: 900px;
+    margin-right: 260px;
     margin-top: -241px;
-    position: absolute;
+    float: right;
     fill: var(--colortoggle-5);
 }
 
 #gameicon5 { /* bot right graphic */
     max-width: 200px;
-    margin-left:1050px;
-    margin-top: 280px;
-    position: absolute;
+    margin-right: -30px;
+    margin-top: 250px;
+    float: right;
     fill: var(--colortoggle-5);
 }
 
 
+
 #gameicon6 { /* top right arrow & x / o */
     max-width: 100px;
-    margin-left:800px;
+    margin-right:150px;
     margin-top: -180px;
-    position: absolute;
+    float: right;
     fill: var(--colortoggle-5);
 }
 
@@ -802,24 +1045,144 @@ button:hover {
 
 #gameicon10 { /* pacman */
     max-width: 50px;
-    margin-left:1140px;
+    margin-right: -165px;
     margin-top: -260px;
-    position: absolute;
-   
+    float: right;
 
 }
   
   #gameicon11 { /* pacman food lines */
     stroke: var(--colortoggle-5);
-    margin-left: 1430px;
-    top: -275px;
-    position: relative;
+    margin-right: -200px;
+    margin-top: -166.5px;
     z-index: 5;
-    
+    float: right;
 
   }
 
+
+  @media (max-width: 1015px) {
+
+    #gameicon6 { /* top right arrow & x / o */
+      max-width: 100px;
+      margin-right:150px;
+      margin-top: -10px;
+      float: right;
+      fill: var(--colortoggle-5);
+  }
+
+
+  #gameicon10 { /* pacman */
+    max-width: 50px;
+    margin-right: -410px;
+    margin-top: -260px;
+    float: right;
+
+}
   
+  #gameicon11 { /* pacman food lines */
+    stroke: var(--colortoggle-5);
+    margin-right: -455px;
+    margin-top: -166.5px;
+    z-index: 5;
+    float: right;
+
+  }
+      
+
+  }
+
+
+
+  @media (max-width: 755px) {
+
+    #gameicon1 { /* leftmost graphic */
+      margin-left: 0px;
+      margin-top: -50px;
+      
+      
+  }
+
+  #gameicon10 { /* pacman */
+    max-width: 50px;
+    margin-right: -410px;
+    margin-top: -460px;
+    float: right;
+
+}
+  
+  #gameicon11 { /* pacman food lines */
+    stroke: var(--colortoggle-5);
+    margin-right: -455px;
+    margin-top: -366.5px;
+    z-index: 5;
+    float: right;
+
+  }
+  
+
+  
+  }
+
+
+
+  @media (max-width: 685px) {
+    
+    #gameicon5 { /* bot right graphic */
+      margin-top: 40px;
+      
+  
+  }
+
+    #gameicon2 { /* 5 dice */
+      max-width: 50px;
+      margin-right: 300px;
+      margin-top: -450px;
+      float: right;
+      rotate: 50deg;
+      fill: var(--colortoggle-5);
+    }
+    
+    
+    #gameicon3 { /* 1 dice */
+      max-width: 50px;
+      margin-right: 269px;
+      margin-top: -487px;
+      float: right;
+      rotate: 20deg;
+      fill: var(--colortoggle-5);
+    }
+    
+    #gameicon4 { /* 6 dice */
+      max-width: 40px;
+      margin-right: 260px;
+      margin-top: -441px;
+      float: right;
+      fill: var(--colortoggle-5);
+    }
+
+    #gameicon8 { /* question cloud */
+      max-width: 50px;
+      margin-left:-80px;
+      margin-top: 390px;
+      position: absolute;
+      fill: var(--colortoggle-5);
+      
+  }
+
+    #gameicon9 { /* ghost */
+      max-width: 50px;
+      margin-left:-100px;
+      margin-top: 348px;
+      position: absolute;
+      rotate: 20deg;
+  
+  }
+
+  
+  
+
+  }
 
 
 
@@ -836,6 +1199,9 @@ button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
+    min-height: 650px;
+
 }
 
 #contact h2 {
@@ -929,6 +1295,12 @@ footer {
     font-family: 'Ubuntu Condensed', sans-serif;
     background-color: var(--colortoggle-8);
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    min-height: 50px;
+
 }
 
 footer::before {
@@ -940,12 +1312,12 @@ footer::before {
     bottom: 0;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0));
     z-index: 1;
+
 }
 
 footer p {
     max-width: 100%;
     padding: 1rem;
-    position: absolute;
     z-index: 2;
     color: #ffa622;
     left: 635px;

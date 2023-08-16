@@ -19,6 +19,10 @@ navButtons.forEach((button) => {
     });
  });
 
+ 
+        
+    
+
 
 // Guessing GAME
 
