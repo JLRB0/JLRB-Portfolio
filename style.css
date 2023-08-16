@@ -887,7 +887,7 @@ nav a:hover {
     font-family: 'Ubuntu Condensed', sans-serif;
     position: relative;
     height: 100vh;
-    min-height: 735px;
+    min-height: 755px;
     
 }
 
@@ -1000,7 +1000,7 @@ button:hover {
 #gameicon5 { /* bot right graphic */
     max-width: 200px;
     margin-right: -30px;
-    margin-top: 250px;
+    margin-top: 230px;
     float: right;
     fill: var(--colortoggle-5);
 }
@@ -1027,7 +1027,7 @@ button:hover {
 #gameicon8 { /* question cloud */
     max-width: 50px;
     margin-left:120px;
-    margin-top: 390px;
+    margin-top: 380px;
     position: absolute;
     fill: var(--colortoggle-5);
     
@@ -1036,7 +1036,7 @@ button:hover {
 #gameicon9 { /* ghost */
     max-width: 50px;
     margin-left:100px;
-    margin-top: 348px;
+    margin-top: 338px;
     position: absolute;
     rotate: 20deg;
 
@@ -1129,7 +1129,7 @@ button:hover {
   @media (max-width: 685px) {
     
     #gameicon5 { /* bot right graphic */
-      margin-top: 40px;
+      margin-top: 20px;
       
   
   }
@@ -1164,7 +1164,7 @@ button:hover {
     #gameicon8 { /* question cloud */
       max-width: 50px;
       margin-left:-80px;
-      margin-top: 390px;
+      margin-top: 370px;
       position: absolute;
       fill: var(--colortoggle-5);
       
@@ -1173,7 +1173,7 @@ button:hover {
     #gameicon9 { /* ghost */
       max-width: 50px;
       margin-left:-100px;
-      margin-top: 348px;
+      margin-top: 328px;
       position: absolute;
       rotate: 20deg;
   
