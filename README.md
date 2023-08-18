@@ -1,5 +1,5 @@
 # JLRB Portfolio Site
  
- ![](Screenshot 2023-08-17 180313.png)
+ ![](images/Screenshot 2023-08-17 180313.png)
 
  > Link: https://jlrb0.github.io/JLRB-Portfolio/
