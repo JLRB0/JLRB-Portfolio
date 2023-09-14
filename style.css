@@ -374,7 +374,7 @@ label svg:last-child {
   overflow: hidden;
   animation: 
   typing 2s steps(11) 16s, 
-  cursor .4s step-end 16s infinite alternate,
+  cursor 0.4s step-end 16s infinite alternate,
   coloro 5s 16s infinite;
 
 }
